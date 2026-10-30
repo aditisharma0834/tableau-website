@@ -1,0 +1,236 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1c2434;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* Navigation */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #4338ca;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+nav a:hover {
+    color: #4338ca;
+}
+
+/* Hero */
+.hero {
+    padding: 90px 0;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #312e81, #4f46e5, #2563eb);
+}
+
+.eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #6366f1;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #c7d2fe;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #e0e7ff;
+    font-size: 1.08rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: white;
+    color: #3730a3;
+}
+
+.btn-secondary {
+    border: 1px solid #c7d2fe;
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding: 75px 0;
+}
+
+.dashboard-section {
+    background: #edf1f8;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #64748b;
+}
+
+/* Tableau visualization cards */
+.viz-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+.viz-top {
+    min-height: 65px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.viz-top h3 {
+    font-size: 1.05rem;
+}
+
+.viz-top a {
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.viz-top a:hover {
+    text-decoration: underline;
+}
+
+.viz-container {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.viz-container tableau-viz {
+    display: block;
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 14px 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .viz-top {
+        padding: 14px;
+        align-items: flex-start;
+    }
+
+    .viz-container tableau-viz {
+        min-width: 320px;
+    }
+}

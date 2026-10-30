@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tableau Analytics Dashboard</title>
+    <meta name="description"
+          content="Explore interactive Tableau stories and dashboards.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tableau Embedding API v3 -->
+    <script
+        type="module"
+        src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+    </script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="#home" class="logo">Tableau Analytics</a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#story">Story</a>
+                <a href="#dashboard">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <p class="eyebrow">DATA VISUALIZATION PROJECT</p>
+
+                <h1>Explore Data. Discover Insights.</h1>
+
+                <p class="hero-description">
+                    Explore interactive visualizations, uncover patterns,
+                    and understand data through Tableau.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#story" class="btn btn-primary">
+                        Explore Story
+                    </a>
+
+                    <a href="#dashboard" class="btn btn-secondary">
+                        View Dashboard
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tableau story -->
+        <section id="story" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">VISUALIZATION 01</p>
+                    <h2>Tableau Story</h2>
+                    <p>
+                        Explore the interactive story and its visual insights.
+                    </p>
+                </div>
+
+                <div class="viz-card">
+                    <div class="viz-top">
+                        <h3>Story 1</h3>
+                        <a
+                            href="https://public.tableau.com/views/STORY1_17931582598010/Story1"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Open in Tableau ↗
+                        </a>
+                    </div>
+
+                    <div class="viz-container">
+                        <tableau-viz
+                            id="storyViz"
+                            src="https://public.tableau.com/views/STORY1_17931582598010/Story1"
+                            toolbar="bottom"
+                            hide-tabs
+                            width="100%"
+                            height="750">
+                        </tableau-viz>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tableau dashboard -->
+        <section id="dashboard" class="section dashboard-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">VISUALIZATION 02</p>
+                    <h2>Interactive Dashboard</h2>
+                    <p>
+                        Explore the dashboard, interact with its charts,
+                        and examine the available data.
+                    </p>
+                </div>
+
+                <div class="viz-card">
+                    <div class="viz-top">
+                        <h3>Dashboard 1</h3>
+                        <a
+                            href="https://public.tableau.com/views/DASHBOARD1_17931581279340/Dashboard1"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Open in Tableau ↗
+                        </a>
+                    </div>
+
+                    <div class="viz-container">
+                        <tableau-viz
+                            id="dashboardViz"
+                            src="https://public.tableau.com/views/DASHBOARD1_17931581279340/Dashboard1"
+                            toolbar="bottom"
+                            hide-tabs
+                            width="100%"
+                            height="750">
+                        </tableau-viz>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © <span id="year"></span> Tableau Analytics
+                | Built with HTML, CSS and JavaScript
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
